@@ -41,7 +41,7 @@ public class AudioEchoExample extends ListenerAdapter
         }
         String token = args[0];
 
-        new JDABuilder(token)                            // Use provided token from command line arguments
+        new JDABuilder().createDefault(token)            // Use provided token from command line arguments
              .addEventListeners(new AudioEchoExample())  // Start listening with this listener
              .setActivity(Activity.listening("to jams")) // Inform users that we are jammin' it out
              .setStatus(OnlineStatus.DO_NOT_DISTURB)     // Please don't disturb us while we're jammin'
